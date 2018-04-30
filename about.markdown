@@ -1,6 +1,7 @@
 ---
 title: About
 date: 2018-04-30 18:50:00 Z
+permalink: about
 ---
 
 Hi, I Vishvendra Singh, am a Software Engineer from Daman living in Ahmedabad, Gujarat, India. I am a graduate in Computer Engineering from Government Engieering College, Dahod (Gujarat Technological University). Currently I am working with Kraffsoft Pvt Ltd. I choose this company because it gives me platform to develop my skills.\
