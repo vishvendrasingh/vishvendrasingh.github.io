@@ -1,0 +1,30 @@
+---
+layout: post
+status: publish
+published: true
+title: Cloud and their performance
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 238
+wordpress_url: http://www.vishvendrasingh.com/?p=238
+date: '2016-07-04 09:32:07 +0530'
+date_gmt: '2016-07-04 09:32:07 +0530'
+categories:
+- cloud
+- Common
+tags:
+- Cloud
+- performance
+comments: []
+---
+<p>Tests performed</p>
+<p>wget -O /dev/null http://speedtest.ams01.softlayer.com/downloads/test500.zip</p>
+<p>wget http://speedtest.ams01.softlayer.com/downloads/test500.zip</p>
+<p>sysbench --test=cpu --cpu-max-prime=20000 run</p>
+<p>speedtest_cli.py<br clear="none" /><br clear="none" />total number of events:10000<br clear="none" /><br clear="none" />dual core(8GB RAM, 2 CORE)-<br clear="none" />total task execution time      63.2625<!--more--><br clear="none" /><br clear="none" />scaleway-ARM(2GB RAM, 4 CORE)<br clear="none" />total task execution time      685.4 time <br clear="none" />33MB/s network speed with wget<br clear="none" />30MB/s write speed wget<br clear="none" /><br clear="none" />scaleway-ATOM CLOUD<br clear="none" />ATOM DEDICATED(8GB RAM, 4 CORE)<br clear="none" />total task execution time      45.8</p>
+<p>111MB/s network speed with wget<br clear="none" />107MB/s write speed wget<br clear="none" /><br clear="none" />amazon(60GB RAM, 32 CORE)-<br clear="none" />total task execution time      27.5<br clear="none" />37.6MB/s network speed with wget<br clear="none" />28.4MB/s write speed wget<br clear="none" /><br clear="none" />digitalocean(2 GB Memory / 40 GB Disk / BLR1 - Ubuntu 16.04 x64 )-<br clear="none" />total task execution time      38.1<br clear="none" />19.1MB/s network speed with wget<br clear="none" />17.1MB/s write speed wget</p>

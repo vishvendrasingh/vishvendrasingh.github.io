@@ -1,0 +1,32 @@
+---
+layout: post
+status: publish
+published: true
+title: fail2ban sendmail
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 254
+wordpress_url: http://www.vishvendrasingh.com/?p=254
+date: '2016-07-15 12:44:32 +0530'
+date_gmt: '2016-07-15 12:44:32 +0530'
+categories:
+- Hacking
+- Linux
+tags:
+- Hacking
+- Linux
+comments: []
+---
+<p>fail2ban do not send mails after installation so you need to do these changes in jail.conf-</p>
+<p>File is available at /etc/fail2ban/jail.conf</p>
+<ol>
+<li>change action = %(action_)s to<br />
+action = %(action_mw)s</li>
+<li>change destemail = youremail</li>
+</ol>
+<p>and dont forget to take backup first</p>

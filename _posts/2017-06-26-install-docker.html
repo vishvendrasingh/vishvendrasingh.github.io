@@ -1,0 +1,43 @@
+---
+layout: post
+status: publish
+published: true
+title: Install docker
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 549
+wordpress_url: https://vishvendra.co/?p=549
+date: '2017-06-26 17:22:47 +0530'
+date_gmt: '2017-06-26 17:22:47 +0530'
+categories:
+- cloud
+- Linux
+- web
+tags: []
+comments: []
+---
+<h3>First, add the GPG key for the official Docker repository to the system:</h3>
+<p><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></p>
+<h3>Add the Docker repository to APT sources:</h3>
+<p><code>sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"</code></p>
+<h3>Next, update the package database with the Docker packages from the newly added repo:</h3>
+<pre class="code-pre command"><code>sudo apt-get update</code></pre>
+<h3>Make sure you are about to install from the Docker repo instead of the default Ubuntu 16.04 repo:<code><br />
+</code></h3>
+<pre class="code-pre command"><code>apt-cache policy docker-ce</code></pre>
+<h3>Now Install</h3>
+<pre class="code-pre command"><code>sudo apt-get install -y docker-ce</code></pre>
+<h3>Check Status</h3>
+<pre class="code-pre command"><code>sudo systemctl status docker</code></pre>
+<h3 class="secondary-code-label " title="Output">Output</h3>
+<pre class="code-pre command"><code>● docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+   Active: <span class="highlight">active (running)</span> since Sun 2016-05-01 06:53:52 CDT; 1 weeks 3 days ago
+     Docs: https://docs.docker.com
+ Main PID: 749 (docker) 
+</code></pre>

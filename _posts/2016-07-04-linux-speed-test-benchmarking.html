@@ -1,0 +1,37 @@
+---
+layout: post
+status: publish
+published: true
+title: Linux speed test and benchmarking
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 209
+wordpress_url: http://www.vishvendrasingh.com/?p=209
+date: '2016-07-04 06:58:50 +0530'
+date_gmt: '2016-07-04 06:58:50 +0530'
+categories:
+- cloud
+- Linux
+tags:
+- Common
+- Linux
+- speed test
+comments: []
+---
+<p>Linux speed test and benchmarking commands are tools I use are these</p>
+<p>For cpu:</p>
+<pre class="lang-bsh prettyprint prettyprinted"><code><span class="pln">sysbench --test=cpu --cpu-max-prime=20000 run
+</span></code></pre>
+<p>For network:</p>
+<pre class="lang-bsh prettyprint prettyprinted"><code><span class="pln">wget -O /dev/null http://speedtest.dal01.softlayer.com/downloads/test100.zip
+wget -O /dev/null http://speedtest.sea01.softlayer.com/downloads/test100.zip
+wget -O /dev/null http://speedtest.ams01.softlayer.com/downloads/test500.zip
+</span></code></pre>
+<p>For Disk write speed:</p>
+<pre class="lang-bsh prettyprint prettyprinted"><code><span class="pln">wget http://speedtest.ams01.softlayer.com/downloads/test500.zip
+</span></code></pre>

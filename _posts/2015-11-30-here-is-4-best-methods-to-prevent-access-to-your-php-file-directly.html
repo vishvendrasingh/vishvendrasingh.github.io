@@ -1,0 +1,30 @@
+---
+layout: post
+status: publish
+published: true
+title: Here is 4 best methods to prevent access to your php file directly
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 80
+wordpress_url: https://www.vishvendrasingh.com/?p=80
+date: '2015-11-30 10:27:31 +0530'
+date_gmt: '2015-11-30 10:27:31 +0530'
+categories:
+- Hacking
+- PHP
+tags:
+- PHP
+comments: []
+---
+<h2>Here is 4 best methods to prevent access to your php file directly</h2>
+<ol>
+<li> &lt;?php if(count(get_included_files()) ==1) exit("Error , Contact vishvendrasingh1993@gmail.com"); echo "data here" ; ?&gt; - See more at: http://www.vishvendrasingh.com/here-is-4-best-methods-to-prevent-access-to-your-php-file-directly/</li>
+<li>&lt;?php debug_backtrace() || die ("Direct access not permitted"); echo "data here" ; ?&gt; - See more at: http://www.vishvendrasingh.com/here-is-4-best-methods-to-prevent-access-to-your-php-file-directly/</li>
+<li>&lt;?php if (strpos($_SERVER['REQUEST_URI'], basename(__FILE__)) !== false) {die('Error , Contact vishvendrasingh1993@gmail.com');} echo "data here" ; ?&gt; - See more at: http://www.vishvendrasingh.com/here-is-4-best-methods-to-prevent-access-to-your-php-file-directly/</li>
+<li>&lt;?php if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) { die('Error , Contact vishvendrasingh1993@gmail.com'); }; echo "data here" ; ?&gt; - See more at: http://www.vishvendrasingh.com/here-is-4-best-methods-to-prevent-access-to-your-php-file-directly/</li>
+</ol>

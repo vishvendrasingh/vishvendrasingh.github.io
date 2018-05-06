@@ -1,0 +1,34 @@
+---
+layout: post
+status: publish
+published: true
+title: tmux dead on ssh exit in raspberry
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 473
+wordpress_url: https://vishvendrasingh.com/?p=473
+date: '2017-02-14 06:11:08 +0530'
+date_gmt: '2017-02-14 06:11:08 +0530'
+categories:
+- Linux
+- raspberry-pi
+tags: []
+comments: []
+---
+<p>Hi there, if are facing dead tmux session on ssh exit issue on raspberry, here it requires libpam-systemd, which is not included by default in minimal Jessie. I rebooted to enable it, but you may only have to relogin and / or restart systemd-logind.service. Install it with command apt-get install libpam-systemd</p>
+<p>systemctl --user status</p>
+<p>output (without libpam-systemd): Failed to create bus connection: Connection refused</p>
+<p>output (with libpam-systemd):</p>
+<p>● raspberrypi<br />
+State: running<br />
+Jobs: 0 queued<br />
+Failed: 0 units<br />
+Since: Tue 2017-02-14 06:04:15 UTC; 4s ago<br />
+CGroup: /user.slice/user-0.slice/user@0.service<br />
+├─739 /lib/systemd/systemd --user<br />
+└─746 (sd-pam)</p>

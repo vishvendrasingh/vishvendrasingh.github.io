@@ -1,0 +1,41 @@
+---
+layout: post
+status: publish
+published: true
+title: ssh tunnel for port on internet without port forwarding
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 256
+wordpress_url: http://www.vishvendrasingh.com/?p=256
+date: '2016-07-15 12:54:48 +0530'
+date_gmt: '2016-07-15 12:54:48 +0530'
+categories:
+- Hacking
+- Linux
+tags:
+- Hacking
+- Linux
+comments:
+- id: 71
+  author: zainab
+  author_email: zainab0602@gmail.com
+  author_url: ''
+  date: '2016-07-15 13:42:20 +0530'
+  date_gmt: '2016-07-15 13:42:20 +0530'
+  content: Really informative article.... :)
+---
+<p>Hi, the below command do really have magical effect to bring ur local port on internet,</p>
+<p>Support you are on nat (nat like you have 192.168.1.2), and you dont have public ip, but you want to show your friend your webserver, or you want him to ssh your system remotely so you need to forward your port with router that may or may not have public ip.</p>
+<p>But if you have a remote server with public, like i do have this server, you can use that to do this task from remote. And that is very easy you can find many tutorials on internet for reverse ssh tunnel.</p>
+<p>here are those very  easy steps you need to perform-</p>
+<ol>
+<li>set "<strong>GatewayPorts yes</strong>" without quotes in sshd_config file of ssh, available at /etc/ssh/sshd_config in ubuntu os</li>
+<li>use this command "<strong>ssh -g -R 8080:localhost:80 username@server.com -p 22</strong>" without quotes and you will see server.com:8080 shows what your lcoal web server has got</li>
+</ol>
+<p>Enjoy I had to do a lot of research to get this successful in my case and now found that this something like path to heaven for me. it takes all the traffic encrypted with ssh protocol hehehe.</p>
+<p>and use <strong>ssh -f -N -R 9108:localhost:80 username@server.com -p 2222 </strong>if you dont want ssh to open everytime</p>

@@ -1,0 +1,27 @@
+---
+layout: post
+status: publish
+published: true
+title: Reboot Linux machine on Input/Output error (Kernel level)
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 436
+wordpress_url: https://vishvendrasingh.com/?p=436
+date: '2017-01-24 12:20:44 +0530'
+date_gmt: '2017-01-24 12:20:44 +0530'
+categories:
+- Linux
+tags: []
+comments: []
+---
+<p>Forced Reboot</p>
+<p>echo 1 &gt; /proc/sys/kernel/sysrq<br />
+echo b &gt; /proc/sysrq-trigger</p>
+<p>Forced Shutdown</p>
+<p>echo 1 &gt; /proc/sys/kernel/sysrq<br />
+echo o &gt; /proc/sysrq-trigger</p>

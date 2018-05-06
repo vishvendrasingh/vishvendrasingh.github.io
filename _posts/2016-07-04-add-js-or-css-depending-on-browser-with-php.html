@@ -1,0 +1,54 @@
+---
+layout: post
+status: publish
+published: true
+title: add js or css depending on browser with php
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 226
+wordpress_url: http://www.vishvendrasingh.com/?p=226
+date: '2016-07-04 07:19:42 +0530'
+date_gmt: '2016-07-04 07:19:42 +0530'
+categories:
+- Common
+- PHP
+- web
+tags:
+- Common
+- PHP
+- web
+comments: []
+---
+<p>add js or css depending on browser with php with the below short code:</p>
+<pre class="lang-bsh prettyprint prettyprinted"><code><span class="pln">
+&lt;?=    (preg_match('/Safari/i',$_SERVER["HTTP_USER_AGENT"] )) ? 'body{line-height:1.2; margin:0;padding:0;} @media print { html, body { margin: 0; padding: 0; }' : '' ?&gt;
+
+Also you can do more with the below code
+
+$u_agent = $_SERVER['HTTP_USER_AGENT'];
+$bname = 'Unknown';
+$platform = 'Unknown';
+$version= "";
+
+//First get the platform?
+if (preg_match('/linux/i', $u_agent)) {
+$platform = 'linux';
+}
+elseif (preg_match('/macintosh|mac os x/i', $u_agent)) {
+$platform = 'mac';
+}
+elseif (preg_match('/windows|win32/i', $u_agent)) {
+$platform = 'windows';
+}
+
+if(preg_match('/Safari/i',$u_agent))
+{
+$bname = 'Apple Safari';
+$ub = "Safari";
+}
+</span></code></pre>

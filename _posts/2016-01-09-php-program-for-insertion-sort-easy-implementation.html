@@ -1,0 +1,54 @@
+---
+layout: post
+status: publish
+published: true
+title: Php program for insertion sort, Easy implementation
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 112
+wordpress_url: https://www.vishvendrasingh.com/?p=112
+date: '2016-01-09 13:29:23 +0530'
+date_gmt: '2016-01-09 13:29:23 +0530'
+categories:
+- Algorithms
+- PHP
+tags:
+- Algorithms
+- PHP
+comments: []
+---
+<p>Php program for insertion sort. Easy implementation.</p>
+<p>here is the link just try once<a href="https://github.com/vishvendrasingh/insertion_sort"> https://github.com/vishvendrasingh/insertion_sort</a></p>
+<p>&lt;?php<br />
+/**Function for sorting an array with insertion sort algorithm.<br />
+*<br />
+* @param array $array<br />
+* @return array<br />
+*/<br />
+function insertionSort(array $array) {<br />
+$length=count($array);<br />
+for ($i=1;$i&lt;$length;$i++) {<br />
+$element=$array[$i];<br />
+$j=$i;<br />
+while($j&gt;0 &amp;&amp; $array[$j-1]&gt;$element) {<br />
+//move value to right and key to previous smaller index<br />
+$array[$j]=$array[$j-1];<br />
+$j=$j-1;<br />
+}<br />
+//put the element at index $j<br />
+$array[$j]=$element;<br />
+}<br />
+return $array;<br />
+}<br />
+$array = range(0, 19);<br />
+shuffle($array);<br />
+var_dump($array);<br />
+$arr = insertionSort($array);<br />
+var_dump($arr);<br />
+?&gt;</p>
+<p>here is the link just try once<a href="https://github.com/vishvendrasingh/insertion_sort"> https://github.com/vishvendrasingh/insertion_sort</a></p>

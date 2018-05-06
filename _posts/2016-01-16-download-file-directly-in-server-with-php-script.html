@@ -1,0 +1,56 @@
+---
+layout: post
+status: publish
+published: true
+title: Download file directly in server with php script
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 128
+wordpress_url: http://www.vishvendrasingh.com/?p=128
+date: '2016-01-16 18:44:42 +0530'
+date_gmt: '2016-01-16 18:44:42 +0530'
+categories:
+- Common
+- PHP
+tags:
+- Cloud
+- Common
+- download
+- PHP
+comments: []
+---
+<p>Hello guys with this php script you can Download file directly in server with php script.</p>
+<p>&lt;html&gt;<br />
+&lt;form method="post"&gt;<br />
+&lt;input name="url" /&gt;<br />
+&lt;input name="submit" type="submit" /&gt;<br />
+&lt;/form&gt;<!--more--><br />
+&lt;?php<br />
+// maximum execution time in seconds<br />
+set_time_limit (24 * 60 * 60);</p>
+<p>if (!isset($_POST['submit'])) die();</p>
+<p>// folder to save downloaded files to. must end with slash<br />
+$destination_folder = './';</p>
+<p>$url = $_POST['url'];<br />
+$newfname = $destination_folder . basename($url);</p>
+<p>$file = fopen ($url, "rb");<br />
+if ($file) {<br />
+$newf = fopen ($newfname, "wb");</p>
+<p>if ($newf)<br />
+while(!feof($file)) {<br />
+fwrite($newf, fread($file, 1024 * 8 ), 1024 * 8 );<br />
+}<br />
+}</p>
+<p>if ($file) {<br />
+fclose($file);<br />
+}</p>
+<p>if ($newf) {<br />
+fclose($newf);<br />
+}<br />
+?&gt;<br />
+&lt;/html&gt;</p>

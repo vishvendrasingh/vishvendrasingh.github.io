@@ -1,0 +1,171 @@
+---
+layout: post
+status: publish
+published: true
+title: Google Place autocomplete & Longitude & Latitude script
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 91
+wordpress_url: https://www.vishvendrasingh.com/?p=91
+date: '2015-12-24 15:31:29 +0530'
+date_gmt: '2015-12-24 15:31:29 +0530'
+categories:
+- Common
+- PHP
+- Projects
+tags:
+- Common
+- Google
+- Latitude
+- Longitude
+comments:
+- id: 5
+  author: Marcy90
+  author_email: winifredheymann@gmail.com
+  author_url: ''
+  date: '2016-10-24 14:42:10 +0530'
+  date_gmt: '2016-10-24 14:42:10 +0530'
+  content: "Reading your site is big pleasure for me, it deserves to go viral, you
+    need some initial \ntraffic only. If you want to know how to get it search for:\nblackhatworren's
+    strategies"
+---
+<p>Use the below code to Use the most advanced feature of google of places auto complete &amp; get longitude &amp; latitude of the selected place instantly. Replace the Your_key with your own google app key</p>
+<pre class="lang-bsh prettyprint prettyprinted"><code><span class="pln">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+<!--more-->
+
+&lt;title&gt;Place Autocomplete Address Form&lt;/title&gt;
+&lt;meta name="viewport" content="initial-scale=1.0, user-scalable=no"&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;script src="http://code.jquery.com/jquery-git2.js"&gt;&lt;/script&gt;
+&lt;style&gt;
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+}
+#map {
+height: 100%;
+}
+&lt;/style&gt;
+&lt;link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"&gt;
+&lt;style&gt;
+#locationField, #controls {
+position: relative;
+width: 480px;
+}
+#autocomplete {
+position: absolute;
+top: 0px;
+left: 0px;
+width: 99%;
+}
+.label {
+text-align: right;
+font-weight: bold;
+width: 100px;
+color: #303030;
+}
+#address {
+border: 1px solid #000090;
+background-color: #f0f0ff;
+width: 480px;
+padding-right: 2px;
+}
+#address td {
+font-size: 10pt;
+}
+.field {
+width: 99%;
+}
+.slimField {
+width: 80px;
+}
+.wideField {
+width: 200px;
+}
+#locationField {
+height: 20px;
+margin-bottom: 2px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div id="locationField"&gt;
+&lt;input id="autocomplete" placeholder="Enter your address"
+onFocus="geolocate()" type="text"&gt;&lt;/input&gt;
+
+&lt;/div&gt;
+&lt;input type="text" name="lat" id="lat" /&gt;
+&lt;input type="text" name="lng" id="lng" /&gt;
+
+&lt;script&gt;
+// This example displays an address form, using the autocomplete feature
+// of the Google Places API to help users fill in the information.
+
+var placeSearch, autocomplete;
+var componentForm = {
+street_number: 'short_name',
+route: 'long_name',
+locality: 'long_name',
+administrative_area_level_1: 'short_name',
+country: 'long_name',
+postal_code: 'short_name'
+};
+
+function initAutocomplete() {
+// Create the autocomplete object, restricting the search to geographical
+// location types.
+autocomplete = new google.maps.places.Autocomplete(
+/** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+{types: ['geocode']});
+
+// When the user selects an address from the dropdown, populate the address
+// fields in the form.
+autocomplete.addListener('place_changed', fillInAddress);
+}
+
+// [START region_fillform]
+function fillInAddress() {
+// Get the place details from the autocomplete object.
+var place = autocomplete.getPlace();
+$('#lat').val(place.geometry.location.lat());
+$('#lng').val(place.geometry.location.lng());
+
+}
+// [END region_fillform]
+
+// [START region_geolocation]
+// Bias the autocomplete object to the user's geographical location,
+// as supplied by the browser's 'navigator.geolocation' object.
+function geolocate() {
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(function(position) {
+var geolocation = {
+lat: position.coords.latitude,
+lng: position.coords.longitude
+};
+var circle = new google.maps.Circle({
+center: geolocation,
+radius: position.coords.accuracy
+});
+autocomplete.setBounds(circle.getBounds());
+});
+}
+}
+// [END region_geolocation]
+
+&lt;/script&gt;
+&lt;script src="https://maps.googleapis.com/maps/api/js?key=Your_key&amp;signed_in=true&amp;libraries=places&amp;callback=initAutocomplete"
+async defer&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</span></code></pre>

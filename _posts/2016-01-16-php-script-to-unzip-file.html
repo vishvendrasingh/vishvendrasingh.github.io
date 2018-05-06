@@ -1,0 +1,45 @@
+---
+layout: post
+status: publish
+published: true
+title: PHP script to unzip file
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 130
+wordpress_url: http://www.vishvendrasingh.com/?p=130
+date: '2016-01-16 18:51:37 +0530'
+date_gmt: '2016-01-16 18:51:37 +0530'
+categories:
+- Common
+- PHP
+tags:
+- Cloud
+- Common
+- PHP
+- unzip
+comments:
+- id: 7
+  author: kurumsal web site
+  author_email: bulakkeskinel3778@gmail.com
+  author_url: ''
+  date: '2016-05-06 18:00:34 +0530'
+  date_gmt: '2016-05-06 18:00:34 +0530'
+  content: Araştırdığım bir çok konuda paylaşımlarınızı buluyorum sağolun
+---
+<p>Hello friends here is the php script to unzip .zip files.</p>
+<p>&lt;?php<br />
+$zip = new ZipArchive;<br />
+$res = $zip-&gt;open('latest.zip');<br />
+if ($res === TRUE) {<br />
+$zip-&gt;extractTo('./');<br />
+$zip-&gt;close();<br />
+echo 'woot!';<br />
+} else {<br />
+echo 'doh!';<br />
+}<br />
+?&gt;</p>

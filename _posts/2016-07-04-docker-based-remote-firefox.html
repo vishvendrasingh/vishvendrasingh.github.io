@@ -1,0 +1,30 @@
+---
+layout: post
+status: publish
+published: true
+title: Docker based remote firefox
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 214
+wordpress_url: http://www.vishvendrasingh.com/?p=214
+date: '2016-07-04 07:05:16 +0530'
+date_gmt: '2016-07-04 07:05:16 +0530'
+categories:
+- cloud
+- Linux
+tags:
+- browser
+- Cloud
+- docker
+- firefox
+comments: []
+---
+<p>Docker based remote firefox, with no history left on descruction with this single command. :)</p>
+<p>Than vnc with this password 1234 enjoy</p>
+<pre class="lang-bsh prettyprint prettyprinted"><code><span class="pln">docker run -p 5900:5900 -e HOME=/ creack/firefox-vnc x11vnc -forever -usepw -create
+</span></code></pre>

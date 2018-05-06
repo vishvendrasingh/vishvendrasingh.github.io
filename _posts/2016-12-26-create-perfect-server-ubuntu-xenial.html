@@ -1,0 +1,52 @@
+---
+layout: post
+status: publish
+published: true
+title: How to create your perfect server with ubuntu xenial
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 399
+wordpress_url: https://vishvendrasingh.com/?p=399
+date: '2016-12-26 16:17:30 +0530'
+date_gmt: '2016-12-26 16:17:30 +0530'
+categories:
+- cloud
+- Common
+- Linux
+- mysql
+- web
+tags: []
+comments: []
+---
+<h3>How to create your perfect server with ubuntu xenial</h3>
+<pre class="lang-bsh prettyprint prettyprinted"><code><span class="pln">
+apt-get update &amp;&amp; apt-get -y upgrade
+apt-get install -y unzip
+cd /tmp
+wget --no-check-certificate -O installer.tgz "https://github.com/servisys/ispconfig_setup/tarball/master"
+tar zxvf installer.tgz
+cd *ispconfig*
+bash install.sh
+
+add index.php in default file of nginx at location : /etc/nginx/sites-available/default
+enable phpmyadmin and squirrelmail by uncommenting in ispconfig.vhost location : /etc/nginx/sites-available/ispconfig.vhost
+
+For Mysql backup
+mysqldump -u root -p DB &gt; DB.sql
+For Mysql Restore
+mysql -uUSER -pPASSWORD DB &lt; DB.sql
+
+To view service logs
+sudo journalctl -f
+
+To list journal entries for the nginx service:
+sudo journalctl --unit nginx
+
+To list journal entries for the nginx service starting from a given time:
+sudo journalctl --unit nginx --since  "2016-10-30 18:17:16"
+</span></code></pre>

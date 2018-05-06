@@ -1,0 +1,67 @@
+---
+layout: post
+status: publish
+published: true
+title: How to Build a WiFi Robot
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 597
+wordpress_url: https://vishvendra.co/?p=597
+date: '2017-12-10 07:51:02 +0530'
+date_gmt: '2017-12-10 07:51:02 +0530'
+categories:
+- cloud
+- Projects
+- Robotics
+tags: []
+comments: []
+---
+<p>I will be showing you how to build a wifi robot from scratch. It is a very straight forward project and can easily be handled by a intermediate robot builder. To complete the robot, it will take a couple of hours. I also attached the android phone with this <a href="https://play.google.com/store/apps/details?id=com.pas.webcam">app ip camera </a>with this robo and connected to the wifi to see live video feed. We need to reduce `Beacon Interval` to 40 instead of 100 (default) if we are using wifi router to command robo with pc/laptop to see real time effect.<!--more--><br />
+Video of complete robot driving:</p>
+<p><span class="embed-youtube"><iframe class="youtube-player" src="https://www.youtube.com/embed/2d-_k3i5YR4?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" width="720" height="435" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></span></p>
+<p>Items needed</p>
+<ol>
+<li>Nodemcu esp8266 <a href="https://www.amazon.in/ESP8266-NodeMcu-WiFi-Development-Board/dp/B00UY8C3N0/">https://www.amazon.in/ESP8266-NodeMcu-WiFi-Development-Board/dp/B00UY8C3N0/</a></li>
+<li>Power Bank</li>
+<li>Robot platform</li>
+<li>Motor driver</li>
+<li>Motor as per requirement</li>
+<li>Jumper wires</li>
+<li>Bread Board (Optional)</li>
+</ol>
+<p><a title="" href="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190602.jpg?ssl=1" data-rel="lightbox-0"><img class="alignnone size-medium wp-image-598" src="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190602.jpg?resize=225%2C300&amp;ssl=1" sizes="(max-width: 225px) 100vw, 225px" srcset="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190602.jpg?resize=225%2C300&amp;ssl=1 225w, https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190602.jpg?resize=768%2C1024&amp;ssl=1 768w, https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190602.jpg?resize=644%2C859&amp;ssl=1 644w, https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190602.jpg?w=1440&amp;ssl=1 1440w, https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190602.jpg?w=2160&amp;ssl=1 2160w" alt="split screen in phone" width="225" height="300" data-attachment-id="598" data-permalink="https://vishvendrasingh.com/build-wifi-robot/img_20171104_190602/" data-orig-file="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190602.jpg?fit=3456%2C4608&amp;ssl=1" data-orig-size="3456,4608" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Redmi Note3&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1509822362&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;3.57&quot;,&quot;iso&quot;:&quot;183&quot;,&quot;shutter_speed&quot;:&quot;0.04&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="split screen in phone" data-image-description="" data-medium-file="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190602.jpg?fit=225%2C300&amp;ssl=1" data-large-file="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190602.jpg?fit=644%2C859&amp;ssl=1" /></a><a title="" href="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190421.jpg?ssl=1" data-rel="lightbox-1"><img class="alignnone size-medium wp-image-596" src="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190421.jpg?resize=225%2C300&amp;ssl=1" sizes="(max-width: 225px) 100vw, 225px" srcset="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190421.jpg?resize=225%2C300&amp;ssl=1 225w, https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190421.jpg?resize=768%2C1024&amp;ssl=1 768w, https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190421.jpg?resize=644%2C859&amp;ssl=1 644w, https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190421.jpg?w=1440&amp;ssl=1 1440w, https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190421.jpg?w=2160&amp;ssl=1 2160w" alt="" width="225" height="300" data-attachment-id="596" data-permalink="https://vishvendrasingh.com/build-wifi-robot/img_20171104_190421/" data-orig-file="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190421.jpg?fit=3456%2C4608&amp;ssl=1" data-orig-size="3456,4608" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Redmi Note3&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1509822261&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;3.57&quot;,&quot;iso&quot;:&quot;790&quot;,&quot;shutter_speed&quot;:&quot;0.058823529411765&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="IMG_20171104_190421" data-image-description="" data-medium-file="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190421.jpg?fit=225%2C300&amp;ssl=1" data-large-file="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190421.jpg?fit=644%2C859&amp;ssl=1" /></a> <a title="" href="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190446.jpg?ssl=1" data-rel="lightbox-2"><img class="alignnone size-medium wp-image-597" src="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190446.jpg?resize=225%2C300&amp;ssl=1" sizes="(max-width: 225px) 100vw, 225px" srcset="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190446.jpg?resize=225%2C300&amp;ssl=1 225w, https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190446.jpg?resize=768%2C1024&amp;ssl=1 768w, https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190446.jpg?resize=644%2C859&amp;ssl=1 644w, https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190446.jpg?w=1440&amp;ssl=1 1440w, https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190446.jpg?w=2160&amp;ssl=1 2160w" alt="" width="225" height="300" data-attachment-id="597" data-permalink="https://vishvendrasingh.com/build-wifi-robot/img_20171104_190446/" data-orig-file="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190446.jpg?fit=3456%2C4608&amp;ssl=1" data-orig-size="3456,4608" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Redmi Note3&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1509822286&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;3.57&quot;,&quot;iso&quot;:&quot;341&quot;,&quot;shutter_speed&quot;:&quot;0.04&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="IMG_20171104_190446" data-image-description="" data-medium-file="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190446.jpg?fit=225%2C300&amp;ssl=1" data-large-file="https://i0.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/IMG_20171104_190446.jpg?fit=644%2C859&amp;ssl=1" /></a></p>
+<p>&nbsp;</p>
+<div id="attachment_587" class="wp-caption aligncenter">
+<p><a title="" href="https://i2.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/bottom.jpg?ssl=1" data-rel="lightbox-3"><img class=" wp-image-587" src="https://i2.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/bottom.jpg?resize=274%2C365&amp;ssl=1" sizes="(max-width: 274px) 100vw, 274px" srcset="https://i2.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/bottom.jpg?resize=225%2C300&amp;ssl=1 225w, https://i2.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/bottom.jpg?resize=768%2C1024&amp;ssl=1 768w, https://i2.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/bottom.jpg?resize=644%2C859&amp;ssl=1 644w, https://i2.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/bottom.jpg?w=1440&amp;ssl=1 1440w, https://i2.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/bottom.jpg?w=2160&amp;ssl=1 2160w" alt="robo bottom" width="274" height="365" data-attachment-id="587" data-permalink="https://vishvendrasingh.com/build-wifi-robot/bottom/" data-orig-file="https://i2.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/bottom.jpg?fit=3456%2C4608&amp;ssl=1" data-orig-size="3456,4608" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Redmi Note3&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1509749137&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;3.57&quot;,&quot;iso&quot;:&quot;1153&quot;,&quot;shutter_speed&quot;:&quot;0.071428571428571&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="robo bottom" data-image-description="&lt;p&gt;robo bottom&lt;/p&gt; " data-medium-file="https://i2.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/bottom.jpg?fit=225%2C300&amp;ssl=1" data-large-file="https://i2.wp.com/vishvendrasingh.com/wp-content/uploads/2017/11/bottom.jpg?fit=644%2C859&amp;ssl=1" /></a></p>
+<p class="wp-caption-text">img 1. robo bottom view</p>
+</div>
+<p>&nbsp;</p>
+<p>Step 1</p>
+<p>Attach the motors with the platform, and join wires. Join left side motor black wires together and same for red.</p>
+<p>step 2</p>
+<p>Attach the motor wires with motor driver as shown in the above image.</p>
+<p>step 3</p>
+<p>takeout the current supply wires out from middle hole of platform and data jumper wires. And connect with pines as follows.</p>
+<p>IN1 -&gt; D1</p>
+<p>IN2 -&gt; D2</p>
+<p>IN3 -&gt; D3</p>
+<p>IN4 -&gt; D4</p>
+<p>connect both the Enable with 3v3 of of esp8266 nodemcu.</p>
+<p>My robo is working without connecting GND so I will be skipping that. Other we can attach the GND of nodemcu with GND of motor driver.</p>
+<p>Now connect the cables with power bank and the robo is ready</p>
+<p>Now the program is in lua. We can control this robo with android app or with pc with linux os.</p>
+<ol>
+<li>App can be found on this <a href="http://z1.ilixe.com/apk/Car.apk">link</a>. For using nodemcu softAP function put <span class="css-truncate css-truncate-target"><a id="7891594d993d1f47a38be9529b786e11-eacf960f73365e55992cf93cdd6e32fcecf257f9" class="js-navigation-open" title="nodemcu-wifi.lua" href="https://github.com/vishvendrasingh/esp8266_nodemcu/blob/master/nodemcu-wifi.lua">nodemcu-wifi.lua</a></span> on nodemcu.</li>
+<li>To control with pc/laptop connect this to the wifi. use the file <span class="css-truncate css-truncate-target"><a id="650c7b7c7eb547135ff825bd51d69208-be8f4e3d606dfb64f3ea7812ca0144b6ccc056ae" class="js-navigation-open" title="python-tcp-getch-linux.py" href="https://github.com/vishvendrasingh/esp8266_nodemcu/blob/master/python-tcp-getch-linux.py">python-tcp-getch-linux.py </a></span>to control robo with command line terminal. Put <span class="css-truncate css-truncate-target"><a id="7891594d993d1f47a38be9529b786e11-eacf960f73365e55992cf93cdd6e32fcecf257f9" class="js-navigation-open" title="nodemcu-wifi.lua" href="https://github.com/vishvendrasingh/esp8266_nodemcu/blob/master/nodemcu-wifi.lua">nodemcu-wifi.lua</a></span> program to nodemcu if you want your robo to connect wifi router at home.</li>
+</ol>
+<p>How to flash nodemcu for lua, I will write another post for that.</p>
+<p>use this command to put this program into nodemcu with luatool<br />
+<code><br />
+python esp8266/luatool/luatool.py --port /dev/ttyUSB0 --src init.lua --dest init.lua --restart</code></p>
+<p>Programs are now kept now on github on this <a href="https://github.com/vishvendrasingh/esp8266_nodemcu">link</a></p>
+<p>Dont forget to attach android phone with ip camera app to see live video from android.</p>

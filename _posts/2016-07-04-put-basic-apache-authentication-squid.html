@@ -1,0 +1,31 @@
+---
+layout: post
+status: publish
+published: true
+title: Put basic apache authentication on squid
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 236
+wordpress_url: http://www.vishvendrasingh.com/?p=236
+date: '2016-07-04 09:25:17 +0530'
+date_gmt: '2016-07-04 09:25:17 +0530'
+categories:
+- Linux
+- Proxy
+tags:
+- Linux
+- squid
+comments: []
+---
+<div><code>htpasswd /etc/squid/passwd user1</code></div>
+<div><code><code>chmod o+r /etc/squid/passwd</code><br clear="none" /></code></div>
+<div><code><code>dpkg -L squid3 | grep ncsa_auth</code><br clear="none" /></code></div>
+<div><code><code><code>vi /etc/squid/squid.conf </code><br clear="none" /></code></code></div>
+<div><code><code> </code></code></div>
+<div><code><code>Append (or modify) following configration directive:<br clear="none" /> <code>auth_param basic program /usr/lib/squid/ncsa_auth /etc/squid/passwd<br clear="none" /> auth_param basic children 5<br clear="none" /> auth_param basic realm Squid proxy-caching web server<br clear="none" /> auth_param basic credentialsttl 2 hours<br clear="none" /> auth_param basic casesensitive off<br clear="none" /> </code><br clear="none" /> Also find out your ACL section and append/modify<br clear="none" /> <code>acl ncsa_users proxy_auth REQUIRED<br clear="none" /> http_access allow ncsa_users<br clear="none" /> </code></code></code><code><code>Save and close the file.</code></code></p>
+</div>

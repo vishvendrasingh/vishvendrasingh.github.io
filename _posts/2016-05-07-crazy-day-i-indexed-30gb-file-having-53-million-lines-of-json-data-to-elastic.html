@@ -1,0 +1,28 @@
+---
+layout: post
+status: publish
+published: true
+title: Crazy day, I indexed 30GB file having 53 million lines of json data to elastic
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 179
+wordpress_url: http://www.vishvendrasingh.com/?p=179
+date: '2016-05-07 16:07:54 +0530'
+date_gmt: '2016-05-07 16:07:54 +0530'
+categories:
+- cloud
+- Projects
+tags:
+- Bigdata
+- Cloud
+comments: []
+---
+<p>Crazy day, I indexed 30GB file having 53 million lines of json data to elastic. Then I tried kibana with it it was really enjoyable after doing it with my drink. Link to kibana is <a href="http://shivalink.com:5601" target="_blank">shivalink.com:5601.</a></p>
+<p>Link to exastic is <a href="http://shivalink.com:9200" target="_blank">shivalink.com:9200</a></p>
+<p>the most tough was to unzip 5GB file using all cores, it was bz2 file. I used pbzip2 but it didn't worked in my case. Then I found lbzip2 -d myfile.json. It was really fast and used my all cores efficiently. It turned out to be 30GB then. After that how could we insert it to elastic, as I am very new to this I found esbulk and started with this. I inserted 45 million entries then It became too slow. Now I had no option other and stopping it right there.</p>
+<p>Than I came up with new idea of tail -n No of rest of the entries and inserted them back. I successfully did it. Now I can say I kind of know big big data..... :) feeling happy</p>

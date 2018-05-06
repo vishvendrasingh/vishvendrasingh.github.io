@@ -1,0 +1,40 @@
+---
+layout: post
+status: publish
+published: true
+title: easy docker for high speed internet proxy
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 223
+wordpress_url: http://www.vishvendrasingh.com/?p=223
+date: '2016-07-04 07:14:45 +0530'
+date_gmt: '2016-07-04 07:14:45 +0530'
+categories:
+- cloud
+- Common
+- Proxy
+tags:
+- Cloud
+- docker
+- Hacking
+- Linux
+- proxy
+comments: []
+---
+<p>easy docker for high speed internet proxy</p>
+<pre class="lang-bsh prettyprint prettyprinted"><code><span class="pln">
+docker pull sameersbn/squid:3.3.8-15
+</span></code></pre>
+<pre class="lang-bsh prettyprint prettyprinted"><code><span class="pln">
+docker build -t sameersbn/squid github.com/sameersbn/docker-squid
+Start Squid using:
+docker run --name squid -d --restart=always -v "/root/squid":/etc/squid3 \
+--publish 3128:3128 \
+--volume /srv/docker/squid/cache:/var/spool/squid3 \
+sameersbn/squid:3.3.8-15
+</span></code></pre>

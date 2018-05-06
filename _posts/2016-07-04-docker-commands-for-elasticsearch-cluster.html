@@ -1,0 +1,41 @@
+---
+layout: post
+status: publish
+published: true
+title: Docker commands for elasticsearch cluster
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 207
+wordpress_url: http://www.vishvendrasingh.com/?p=207
+date: '2016-07-04 06:51:35 +0530'
+date_gmt: '2016-07-04 06:51:35 +0530'
+categories:
+- cloud
+- elastic search
+tags:
+- Bigdata
+- Cloud
+- elasticsearch
+comments: []
+---
+<p>Docker commands for elasticsearch cluster,are here</p>
+<p>------------------------START MAIN--------------------------<br />
+------------------------REFERENCE COMMANDS------------------<br />
+docker run -d --name es0 -p 9200:9200 es<br />
+docker run -d --name es1 --link es0 -e UNICAST_HOSTS=es0 es<br />
+docker run -d --name es2 --link es0 -e UNICAST_HOSTS=es0 es<br />
+------------------------REFERENCE COMMANDS------------------<!--more--></p>
+<p>from:/root/docker/m1/<br />
+docker run -d --name es1 -p 9201:9200 -p 9301:9300 -v "$PWD/config":/usr/share/elasticsearch/config elasticsearch</p>
+<p>from:/root/docker/m2/<br />
+docker run -d --name es1 --link es0 -e UNICAST_HOSTS=es0 -p 9202:9200 -p 9302:9300 -v "$PWD/config":/usr/share/elasticsearch/config elasticsearch</p>
+<p>from:/root/docker/m3/<br />
+docker run -d --name es2 --link es0 -e UNICAST_HOSTS=es0 -p 9203:9200 -p 9303:9300 -v "$PWD/config":/usr/share/elasticsearch/config elasticsearch</p>
+<p>from:/root/docker/m4/<br />
+docker run -d --name es3 --link es0 -e UNICAST_HOSTS=es0 -p 9204:9200 -p 9304:9300 -v "$PWD/config":/usr/share/elasticsearch/config elasticsearch<br />
+------------------------END MAIN--------------------------</p>

@@ -1,0 +1,77 @@
+---
+layout: page
+status: publish
+published: true
+title: google-place-lat-long
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 94
+wordpress_url: https://www.vishvendrasingh.com/?page_id=94
+date: '2015-12-24 15:49:34 +0530'
+date_gmt: '2015-12-24 15:49:34 +0530'
+categories: []
+tags: []
+comments: []
+---
+<p><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><br />
+Place Autocomplete Address Form</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="locationField"><input id="autocomplete" type="text" placeholder="Enter your address" /></div>
+<p><input id="lat" name="lat" type="text" /><br />
+<input id="lng" name="lng" type="text" /></p>
+<p><script><br />
+var placeSearch, autocomplete;<br />
+var componentForm = {<br />
+  street_number: 'short_name',<br />
+  route: 'long_name',<br />
+  locality: 'long_name',<br />
+  administrative_area_level_1: 'short_name',<br />
+  country: 'long_name',<br />
+  postal_code: 'short_name'<br />
+};</p>
+<p>function initAutocomplete() {<br />
+  // Create the autocomplete object, restricting the search to geographical<br />
+  // location types.<br />
+  autocomplete = new google.maps.places.Autocomplete(<br />
+      /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),<br />
+      {types: ['geocode']});</p>
+<p>  // When the user selects an address from the dropdown, populate the address<br />
+  // fields in the form.<br />
+  autocomplete.addListener('place_changed', fillInAddress);<br />
+}</p>
+<p>// [START region_fillform]<br />
+function fillInAddress() {<br />
+  // Get the place details from the autocomplete object.<br />
+  var place = autocomplete.getPlace();<br />
+  $('#lat').val(place.geometry.location.lat());<br />
+  $('#lng').val(place.geometry.location.lng());</p>
+<p>}<br />
+// [END region_fillform]</p>
+<p>// [START region_geolocation]<br />
+// Bias the autocomplete object to the user's geographical location,<br />
+// as supplied by the browser's 'navigator.geolocation' object.<br />
+function geolocate() {<br />
+  if (navigator.geolocation) {<br />
+    navigator.geolocation.getCurrentPosition(function(position) {<br />
+      var geolocation = {<br />
+        lat: position.coords.latitude,<br />
+        lng: position.coords.longitude<br />
+      };<br />
+      var circle = new google.maps.Circle({<br />
+        center: geolocation,<br />
+        radius: position.coords.accuracy<br />
+      });<br />
+      autocomplete.setBounds(circle.getBounds());<br />
+    });<br />
+  }<br />
+}<br />
+// [END region_geolocation]<br />
+</script><br />
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;callback=initAutocomplete" async="" defer="defer"></script></p>

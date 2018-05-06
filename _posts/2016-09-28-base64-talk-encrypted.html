@@ -1,0 +1,40 @@
+---
+layout: post
+status: publish
+published: true
+title: Base64 talk encrypted
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 317
+wordpress_url: http://vishvendrasingh.com/?p=317
+date: '2016-09-28 17:23:38 +0530'
+date_gmt: '2016-09-28 17:23:38 +0530'
+categories:
+- Encryption
+- Linux
+tags:
+- encryption
+- Linux
+comments: []
+---
+<h3>Base64 talk encrypted</h3>
+<p>Hi all, why most of computer engineers choose Linux as their preferred os. Friends we get lot of advantages here like we can talk encrypted</p>
+<pre class="lang-bsh prettyprint prettyprinted"><code><span class="pln">For encryption
+$ echo -n hi | base64
+output: aGk=
+</span></code></pre>
+<pre class="lang-bsh prettyprint prettyprinted"><code><span class="pln">For decryption</span></code><code><span class="pln">
+echo -n aGk= | base64 -d
+output: hi
+
+Not only this you can also encrypt image with the following command
+$ echo -n $(cat image.jpg) | base64 &gt; </span></code><code><span class="pln">inputfile</span></code></pre>
+<pre class="lang-bsh prettyprint prettyprinted"><code><span class="pln">To decrypt use
+$ echo -n $(cat inputfile) | base64 -d
+</span></code></pre>
+<p>Enjoyeee...</p>

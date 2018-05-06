@@ -1,0 +1,40 @@
+---
+layout: post
+status: publish
+published: true
+title: Different ways to create objects in Java
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 323
+wordpress_url: http://vishvendrasingh.com/?p=323
+date: '2016-10-05 07:04:17 +0530'
+date_gmt: '2016-10-05 07:04:17 +0530'
+categories:
+- java
+tags:
+- java
+comments: []
+---
+<h2>Different ways to create objects in Java</h2>
+<p>This is a trivia. Yeah, it’s a bit tricky question and people often get confused. I had searched a lot to get all my doubts cleared.</p>
+<p>There are four different ways (I really don’t know is there a fifth way to do this) to create objects in java:</p>
+<p><strong>1. Using new keyword</strong><br />
+This is the most common way to create an object in java. I read somewhere that almost 99% of objects are created in this way.</p>
+<pre>MyObject object = <span style="color: #0000ff;">new</span> MyObject();</pre>
+<p><strong>2. Using Class.forName()</strong><br />
+If we know the name of the class &amp; if it has a public default constructor we can create an object in this way.<!--more--></p>
+<pre>MyObject object = (MyObject) Class.forName(<span style="color: #0000ff;">"<span class="skimlinks-unlinked">subin.rnd.MyObject</span>"</span>).newInstance();</pre>
+<p><strong> 3. Using clone()<br />
+</strong>The <em>clone() </em>can be used to create a copy of an existing object.</p>
+<pre>MyObject anotherObject = <span style="color: #0000ff;">new</span> MyObject(); 
+MyObject object = anotherObject.<strong>clone()</strong>;</pre>
+<p><strong>4. Using object deserialization</strong><br />
+Object deserialization is nothing but creating an object from its serialized form.</p>
+<pre>ObjectInputStream inStream = <span style="color: #0000ff;">new</span> ObjectInputStream(anInputStream ); 
+MyObject object = (MyObject) inStream.readObject();</pre>
+<p>Now you know how to create an object. But its advised to create objects only when it is necessary to do so.</p>

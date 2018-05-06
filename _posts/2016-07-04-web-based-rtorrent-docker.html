@@ -1,0 +1,30 @@
+---
+layout: post
+status: publish
+published: true
+title: web based rtorrent with docker
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 232
+wordpress_url: http://www.vishvendrasingh.com/?p=232
+date: '2016-07-04 09:21:19 +0530'
+date_gmt: '2016-07-04 09:21:19 +0530'
+categories:
+- cloud
+- Linux
+tags:
+- Cloud
+- docker
+- Linux
+comments: []
+---
+<pre xml:space="preserve"><code>web based rtorrent with docker, with this very simple below command
+then see it live on http://url:8086
+and user password is</code></pre>
+<pre xml:space="preserve"><code>  docktorrent/p@ssw0rd</code></pre>
+<pre xml:space="preserve"><code><br clear="none" />docker run -it \<br clear="none" />    -p 8086:80 -p 45566:45566 -p 9527:9527/udp \<br clear="none" />    --dns 8.8.8.8 \<br clear="none" />    -v /data-store:/rtorrent \<br clear="none" />    -e UPLOAD_RATE=1024 \<br clear="none" />    kfei/docktorrent</code></pre>

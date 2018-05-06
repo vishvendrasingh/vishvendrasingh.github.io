@@ -1,0 +1,32 @@
+---
+layout: post
+status: publish
+published: true
+title: Set up git with bitbucket.org
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 571
+wordpress_url: https://vishvendra.co/?p=571
+date: '2017-07-09 06:26:51 +0530'
+date_gmt: '2017-07-09 06:26:51 +0530'
+categories:
+- Uncategorized
+tags: []
+comments: []
+---
+<p><strong>First check if have set up ssh-keygen Or set up with this command</strong></p>
+<p>$ssh-keygen</p>
+<p><strong>Test connection</strong></p>
+<p>ssh -T git@bitbucket.org</p>
+<p><strong>Then Check if ssh-Agent is working</strong></p>
+<p>ssh-add -l</p>
+<p><strong>If not then start with this command</strong></p>
+<p>eval `ssh-agent -s`</p>
+<p><strong>Now get you .pub create file in ssh-keygen process and paste content in but bucket</strong></p>
+<p>Ref:</p>
+<p><a href="https://confluence.atlassian.com/bitbucket/configure-multiple-ssh-identities-for-gitbash-mac-osx-linux-271943168.html" target="_blank" rel="noopener noreferrer">confluence.atlassian.com</a></p>

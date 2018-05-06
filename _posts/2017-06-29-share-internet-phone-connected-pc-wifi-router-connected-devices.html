@@ -1,0 +1,29 @@
+---
+layout: post
+status: publish
+published: true
+title: share phone internet connected to pc with wifi and connected devices
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 566
+wordpress_url: https://vishvendra.co/?p=566
+date: '2017-06-29 19:02:46 +0530'
+date_gmt: '2017-06-29 19:02:46 +0530'
+categories:
+- Uncategorized
+tags: []
+comments: []
+---
+<p>check detail of ip with ifconfig</p>
+<p>iptables -t nat -A POSTROUTING -o phone-conn -j MASQUERADE<br />
+iptables -A FORWARD -i phone-conn -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT<br />
+iptables -A FORWARD -i eth0 -o phone-conn -j ACCEPT</p>
+<p>also do not forget to set dns</p>
+<p>https://www.cyberciti.biz/faq/howto-linux-bsd-unix-set-dns-nameserver/</p>
+<p>I got this idea when I was reading this page</p>
+<p>https://mylinuxcode.com/share-iphones-internet-local-network-lan-using-raspberry-pi/</p>

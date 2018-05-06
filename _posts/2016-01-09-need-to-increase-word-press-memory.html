@@ -1,0 +1,36 @@
+---
+layout: post
+status: publish
+published: true
+title: Need to Increase Word Press memory
+author:
+  display_name: vishvendra
+  login: vishvendra
+  email: vishvendrasingh1993@gmail.com
+  url: ''
+author_login: vishvendra
+author_email: vishvendrasingh1993@gmail.com
+wordpress_id: 106
+wordpress_url: https://www.vishvendrasingh.com/?p=106
+date: '2016-01-09 05:25:57 +0530'
+date_gmt: '2016-01-09 05:25:57 +0530'
+categories:
+- Common
+- wordpress
+tags:
+- Common
+comments: []
+---
+<p>Need to Increase Word Press memory  Edit this file here - wp-includes/default-constants.php</p>
+<pre class="lang-bsh prettyprint prettyprinted"><code><span class="pln">
+// set memory limits
+if ( !defined('WP_MEMORY_LIMIT') ) {
+if ( is_multisite() ) {
+define('WP_MEMORY_LIMIT', '64M');
+} else {
+define('WP_MEMORY_LIMIT', '40M');
+}
+}
+</span></code></pre>
+<p>&nbsp;</p>
+<p>change 40 to some other value</p>
