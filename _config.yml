@@ -5,7 +5,7 @@ description: A virtual proof that name is awesome!
 navbar-links:
   About Me: vishvendra
   Resume: https://docs.google.com/document/d/1I5NaqYs1fU7HlEGcGe4Gb2xvmk_kOZmj_yn7noXlIb4/edit?usp=sharing
-avatar: /img/avatar-icon.png
+avatar: /img/avatar-icon.jpg
 navbar-col: '#F5F5F5'
 navbar-text-col: '#404040'
 navbar-children-col: '#F5F5F5'
