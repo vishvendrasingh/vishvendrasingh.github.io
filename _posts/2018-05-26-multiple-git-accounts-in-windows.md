@@ -48,3 +48,6 @@ Host two.github.com
 $ssh -T git@github.co
 $ssh -T git@github.com -i /c/Users/you/.ssh/id_rsa_two
 ```
+
+**then set git remote like this**
+git@one.github.com:one/one..git
