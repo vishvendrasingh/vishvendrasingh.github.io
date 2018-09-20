@@ -17,7 +17,7 @@ Boss - Never met him but heard manager and collegaues that he himslef works on A
 Team - Best supportive team, so makes every moment enjoyable. Team Leader and manager I have never seen being so supportive and gives you ideas from their experiences if you get stuck. I don't know if I am going to get such good manager and team ever. I sill miss Rais Sir and Amit sir. Actually I miss all the friends there. 
 Type - Product based 
 
-[One Click IT Consultancy Pvt Ltd](http://http://oneclickitsolution.com/)
+[One Click IT Consultancy Pvt Ltd](http://oneclickitsolution.com/)
 Hr - Mrs Rajni Sharma [ very sweet person ]
 Boss - Most amusing guy and you can get to learn a lot of things from him
 Team - If you believe that you work and learn on your own choose this company over any other because you can get lot of stuff and thing moving around and get the things done. You going to become pro for sure they take your time to inform you how you can improve yourself and that is the best team mates do. 
@@ -26,7 +26,7 @@ Type - Service based
 
 [bank2grow](http://www.bank2grow.com) 
 I don't know why their website is not working at this time and writting this post, but one can read here this is good description of the company - 
-https://www.justdial.com/Mumbai/Bank2grow-Above-Nulife-Hospital-Ghatkopar-West/022PXX22-XX22-171115132031-H9R6_BZDET
+[https://www.justdial.com/Mumbai/Bank2grow-Above-Nulife-Hospital-Ghatkopar-West/022PXX22-XX22-171115132031-H9R6_BZDET](https://www.justdial.com/Mumbai/Bank2grow-Above-Nulife-Hospital-Ghatkopar-West/022PXX22-XX22-171115132031-H9R6_BZDET)
 
 Hr - Ms Smita [ Again very sweet person ]
 Boss - Very nice and knowledgeable Person
