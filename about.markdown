@@ -1,6 +1,8 @@
 ---
 title: About
-date: 2018-04-30 18:50:00 Z
+layout: page
+show-avatar: true
+date: '2018-04-30 11:50:00 -0700'
 permalink: about
 ---
 
@@ -17,12 +19,10 @@ Hi, I Vishvendra Singh, am a Software Engineer from Daman living in Ahmedabad, G
 
 [Link to Facebook](https://www.facebook.com/ervishvendrasingh)
 
-[Link to Linkedin](https://www.linkedin.com/in/ervishvendra)
+[Link to Linkedin](https://www.linkedin.com/in/thevishvendra)
 
-[Link to Twitter](https://twitter.com/vishvendra_twit)
+[Link to Twitter](https://twitter.com/thevishvendra)
 
 [Link to Google\+](https://plus.google.com/\+vishvendrapratapsinghv)
 
 [Link to Github](https://github.com/vishvendrasingh)
-
-[Link to c9](https://c9.io/vishvendra)
